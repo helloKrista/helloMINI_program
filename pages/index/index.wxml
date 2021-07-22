@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<scroll-view class="container">
+  <view class="search flex-wrp">
+    <view class="search-left flex-item">
+      <image src="../../images/search.png"></image>
+      <input placeholder="搜索问题，话题或人" placeholder-class="search-placeholder"/>
+    </view>
+    <view class="search-right flex-item" bindtap="upper">
+          <image src="../../images/lighting.png"></image>
+      </view>
+  </view>
+
+  <block wx:for="{{feed}}" wx:for-index="" wx:for-item="" data-idx="{{}}">
+    <view class="feed-item">
+      <view class="feed-source">
+        <a class="">
+          <view class="avatar">
+            <image src="{{item.feed_source_img}}"></image>
+            <text>{{item.feed_source_name}}{{item.feed_source_txt}}</text>
+            <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>
+          </view>
+        </a>
+      </view>
+      <view class="feed-source">
+        
+      </view>
+    </view>
+  </block>
+
+  <view>
+    <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
+  </view>
+</scroll-view>

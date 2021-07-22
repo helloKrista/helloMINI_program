@@ -1,0 +1,11 @@
+<!--custom-tab-bar/index.wxml-->
+<view class="tab-bar">
+  <!-- 边框样式 -->
+  <view class="tab-bar-border"></view>
+  <!--乐库tabbar-->
+  <!-- <view class="tab-bar-item">
+    <image src='../utils/icon/home.png' hidden='{{isShow_index}}' bindtap='switchTab_index'></image>
+    <image src='../utils/icon/homeActive.png' hidden='{{!isShow_index}}' bindtap='switchTab_index'></image>
+    <cover-view style="color:{{isShow_index ? selectedColor : color}}">乐库</cover-view>
+  </view> -->
+</view>

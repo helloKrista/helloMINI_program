@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/play/index",
+    "pages/index/my/index",
+    "pages/logs/logs",
+    "custom-tab-bar/index"
+  ],
+  "tabbar":{ "custom":true},
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0068C4",
+    "navigationBarTitleText": "某乎",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

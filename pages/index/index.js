@@ -19,11 +19,21 @@ Page({
     },{
       //"text":"我的",
       "pagePath":"pages/index/my/index",
-      "iconPath":"/utils/icon/my.png",
-      "selectedIconPath":"/utils/icon/myActive.png"
+      "iconPath":"/utils/icon/My.png",
+      "selectedIconPath":"/utils/icon/MyActive.png"
     }],
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+  },
+  bindItemTap(){
+    wx.navigateTo({
+      url: '../anwser/answer',
+    })
+  },
+  bindQueTap(){
+    wx.navigateTo({
+      url: '../question/question',
+    })
   },
   getData(){
     console.log('getData')
@@ -42,6 +52,67 @@ Page({
         canIUseGetUserProfile: true
       })
     }
+  },
+  nextLoad(){
+    wx.showToast({
+      title: '加载中',
+      icon:'loading',
+      duration:4000
+    })
+    var next = utils.getNext();
+    console.log("continueload");
+    var next_data = next.data;
+    this.setData({
+      feed:this.data.feed.concat(next_data),
+      feed_length:this.data.feed.length+next_data.length
+    });
+    setTimeout(function(){
+      wx.showToast({
+        title: '加载成功',
+        icon:'success',
+        duration:2000
+      })
+    },3000)
+  },
+  upper(){
+    wx.showNavigationBarLoading();
+    this.refresh();
+    console.log("upper");
+    setTimeout(function(){
+      wx.hideNavigationBarLoading();
+      wx.stopPullDownRefresh();
+    },1000)
+  },
+  lower(){
+    wx.showNavigationBarLoading();
+    this.refresh();
+    console.log("lower");
+    var that = this;
+    setTimeout(function(){
+      wx.hideNavigationBarLoading();
+      that.nextLoad();
+    },2000)
+  },
+  refresh(){
+    wx.showToast({
+      title: '刷新中',
+      icon:'loading',
+      duration:3000
+    });
+    var feed = utils.getData2();
+    console.log("loaddata");
+    var feed_data = feed.data;
+    this.setData({
+      feed:feed_data,
+      feed_length:feed_data.length
+    });
+    setTimeout(function(){
+      wx.showToast({
+        title:'刷新成功',
+        icon:'success',
+        duration:2000
+      })
+    },3000)
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗

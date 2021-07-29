@@ -1,12 +1,15 @@
 {
   "pages":[
+    "pages/anwser/answer",
     "pages/index/index",
     "pages/index/play/index",
     "pages/index/my/index",
     "pages/logs/logs",
+   
+    "pages/question/question",
     "custom-tab-bar/index"
   ],
-  "tabbar":{ "custom":true},
+  "tabbar":{ "custom":true },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#0068C4",

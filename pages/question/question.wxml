@@ -1,2 +1,29 @@
-<!--pages/question/question.wxml-->
-<text>pages/question/question.wxml</text>
+<view>
+  <view class="miniMune">
+    <text>阅读</text>
+    <text>电子书</text>
+    <text>Kindle</text>
+    <text>书籍</text>
+    <text>文学</text>
+  </view>
+  <view class="que-title">
+    <text>选择Kindle而不是纸质书的原因是什么？</text>
+    <text class="que-tag">
+      WEB前端*不靠谱天气预报员*想做代码小仙女
+    </text>
+  </view>
+  <view class="que-comment">
+    <view>
+      <image src="../../images/eye.png"></image>
+      <text>3316</text>
+    </view>
+    <view>
+      <image src="../../images/comment2.png"></image>
+      <text>27</text>
+    </view>
+  </view>
+  <view></view>
+  <view>
+    <block></block>
+  </view>
+</view>

@@ -1,1 +1,28 @@
-/* pages/question/question.wxss */
+
+
+.miniMune{
+  width: 670rpx; padding:20rpx 40rpx;
+}
+.miniMune text{
+  background:#EEF5F8;font-size: 28rpx;
+  color:#2186E0; border-radius: 30rpx;
+  padding:10rpx 20rpx;margin: 0 10rpx;
+}
+.que-title{
+  width: 670rpx; padding: 0 40rpx; margin-top:10rpx;
+}
+.que-title text{
+  font-size: 38rpx;
+}
+text.que-tag {
+  font-size: 28rpx;
+}
+.que-comment view{
+  display: inline-block;
+}
+.que-comment text{
+  color:#bebebe; font-size: 24rpx;
+}
+.que-comment image{
+  width: 48rpx; height: 48rpx;
+}

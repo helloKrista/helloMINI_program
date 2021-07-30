@@ -2,8 +2,12 @@ Page({
   data: {
 
   },
-  toQuestion(){},
+  toQuestion(){
+    wx.navigateTo({
+      url: '../question/question',
+    })
+  },
   onLoad: function (options) {
-
+   
   }
 })

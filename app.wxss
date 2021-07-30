@@ -18,6 +18,11 @@
   flex-grow: 1;
   text-align: center;
 }
+.flex-tab{
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
 .container .feed-item{
   background:#fff;
   width: 690rpx;border-top:1px solid #eee;

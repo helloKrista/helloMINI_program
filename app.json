@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/anwser/answer",
+    "pages/question/question",
     "pages/index/index",
     "pages/index/play/index",
     "pages/index/my/index",
     "pages/logs/logs",
+    "pages/anwser/answer",
    
-    "pages/question/question",
     "custom-tab-bar/index"
   ],
   "tabbar":{ "custom":true },

@@ -1,0 +1,30 @@
+<view class="top-tab flex-wrp flex-tab">
+  <view class="toptab flex-item {{currentNavtab == idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" data-idx="{{idx}}" wx:for-item="itemName" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="container notify withtab" bindscrolltoupper="upper" bindscrolltolower="lower">
+  <view class="ctnt0" hidden="{{currentNavtab==0?'':true}}">
+    <view class="unread">
+      <text>0 条未读</text>
+      <image src="../../images/allread.png"></image>
+    </view>
+    <block wx:for="{{content}}" wx:for-item="item">
+      <view class="notify-item flex-wrp">
+        <view class="avatar flex-item">
+          <image src="{{item.imgSrc}}"></image>
+        </view>
+        <view class="notify-content flex-item">
+          <text class="notify-source">{{item.userId}} 回答了问题</text>
+          <text class="notify-title">{{item.que}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="ctnt0" hidden="{{currentNavtab ==1?'':true}}">
+    赞与感谢
+  </view>
+  <view class="ctnt0" hidden="{{currentNavtab ==2?'':true}}">
+    关注
+  </view>
+</scroll-view>

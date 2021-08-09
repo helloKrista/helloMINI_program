@@ -1,18 +1,32 @@
-// pages/index/play/index.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    "user":{},
+    "menu":[
+      {"imgSrc":"../../images/eye.png" , "txt":"我的关注"},
+      {"imgSrc":"../../images/star.png" , "txt":"我的收藏"},
+      {"imgSrc":"../../images/draft.png" , "txt":"我的草稿"},
+      {"imgSrc":"../../images/recent.png" , "txt":"最近浏览"},
+      {"imgSrc":"../../images/book.png" , "txt":"我的书架"},
+      {"imgSrc":"../../images/live.png" , "txt":"我的Live"},
+      {"imgSrc":"../../images/zhi.png" , "txt":"我的值乎"},
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    app.getUserInfo(function(userInfo){
+      that.setData({
+        user:userInfo
+      })
+    })
   },
 
   /**

@@ -1,35 +1,36 @@
-// pages/question/question.js
 var utils = require('../../utils/util')
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    navTab: ["推荐", "圆桌", "热门", "收藏"],
+    currentNavtab: "0",
+    indicatorDots:false,
+    autoplay:true,
+    interval:5000,
+    duration:1000,
+    imgUrls:[
+      '../../images/24213.jpg',
+      '../../images/24280.jpg',
+      '../../images/1444983318907-_DSC1826.jpg'
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  bindItemTap(){
-    wx.navigateTo({
-      url: '../anwser/answer',
-    })
-  },
-  getData(){
-    var feed = utils.getData2();
+  refresh(){
+    var feed = utils.getDiscovery();
     var feed_data = feed.data;
     this.setData({
-      feed:feed_data,
-      feed_length:feed_data.length
+      feed: feed_data,
+      feed_length: feed_data.length
     })
   },
   onLoad: function (options) {
-    this.getData();
-    
+    var that = this;
+    this.refresh();
   },
-
+  switchTab(e){
+    this.setData({
+      currentNavtab: e.currentTarget.dataset.idx
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

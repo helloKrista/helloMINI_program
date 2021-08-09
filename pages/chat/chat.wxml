@@ -1,0 +1,17 @@
+
+<scroll-view class="container chat" scroll-y="true" bindscrolltolower="lower" bindscrolltoupper="upper" >
+  <block wx:for="{{chatContent}}" wx:for-item="item">
+    <view class="chat-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="{{item.imgSrc}}"></image>
+      </view>
+      <view class="chat-content flex-item">
+        <view class="chat-source">
+          <text class="chatmate">{{item.userId}}</text>
+          <text class="lasttime">{{item.lasttime}}</text>
+        </view>
+        <text class="chat-txt">{{item.chatInfo}}</text>
+      </view>
+    </view>
+  </block>
+</scroll-view>

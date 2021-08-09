@@ -1,15 +1,52 @@
 {
   "pages":[
-    "pages/question/question",
     "pages/index/index",
-    "pages/index/play/index",
-    "pages/index/my/index",
+    "pages/discovery/discovery",
+    "pages/notify/notify",
+    "pages/chat/chat",
+    "pages/more/more",
     "pages/logs/logs",
     "pages/anwser/answer",
-   
-    "custom-tab-bar/index"
+    "pages/question/question"
   ],
-  "tabbar":{ "custom":true },
+  "tabBar":{ 
+    "color":"#626567",
+    "selectedColor":"#2a8ce5",
+    "backgroundColor":"#fbfbfb",
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_focus.png"
+      },
+      {
+        "pagePath": "pages/discovery/discovery",
+        "text": "",
+        "iconPath": "images/discovery.png",
+        "selectedIconPath": "images/discovery_focus.png"
+      },
+      {
+        "pagePath": "pages/notify/notify",
+        "text": "",
+        "iconPath": "images/ring.png",
+        "selectedIconPath": "images/ring_focus.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "",
+        "iconPath": "images/chat.png",
+        "selectedIconPath": "images/chat_focus.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "",
+        "iconPath": "images/burger.png",
+        "selectedIconPath": "images/burger_focus.png"
+      }
+    ]
+ },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#0068C4",

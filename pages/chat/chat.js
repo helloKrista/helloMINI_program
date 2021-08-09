@@ -1,10 +1,23 @@
-// pages/index/my/index.js
+// pages/chat/chat.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    "chatContent":[
+      {
+        "imgSrc":'../../images/icon8.jpg',
+        "userId":'Alex',
+        "lasttime":'一个月前',
+        "chatInfo":'你好~你好~ 你好~'
+      },{
+        "imgSrc":'../../images/icon9.jpeg',
+        "userId":'George',
+        "lasttime":'一个月前',
+        "chatInfo":'你好~你好~ 你好~'
+      }
+    ]
 
   },
 

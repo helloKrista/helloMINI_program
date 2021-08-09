@@ -6,22 +6,6 @@ var utils = require('../../utils/util')
 Page({
   data: {
     feed:[],
-    list:[{
-      // "text":"首页",
-      "pagePath":"pages/index/index",
-      "iconPath":"/utils/icon/home.png",
-      "selectedIconPath":"/utils/icon/homeActive.png"
-    },{
-      //"text":"播放",
-      "pagePath":"pages/index/play/index",
-      "iconPath":"/utils/icon/music.png",
-      "selectedIconPath":"/utils/icon/musicActive.png"
-    },{
-      //"text":"我的",
-      "pagePath":"pages/index/my/index",
-      "iconPath":"/utils/icon/My.png",
-      "selectedIconPath":"/utils/icon/MyActive.png"
-    }],
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
@@ -33,6 +17,11 @@ Page({
   bindQueTap(){
     wx.navigateTo({
       url: '../question/question',
+    })
+  },
+  tabchange(){
+    wx.navigateTo({
+      url: 'url',
     })
   },
   getData(){

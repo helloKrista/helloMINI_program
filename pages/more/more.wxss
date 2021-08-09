@@ -1,0 +1,51 @@
+.more{
+  width:750rpx; 
+  background:#eee;
+}
+.userInfo{
+  width: 670rpx; height: 100rpx;
+  padding:20rpx 40rpx;
+  background:#fff;
+  margin: 20rpx 0;
+}
+.userInfo .avatar{
+  flex:1; padding:0 20rpx;
+}
+.userInfo .avatar image{
+  width:100rpx; height: 100rpx;
+  border-radius: 100rpx;
+}
+.userInfo .more-resource{
+  flex:4 ; text-align: left;
+  padding:0 20rpx;
+}
+.userInfo .more-resource .userName{
+  display: block; color:#777; font-size:32rpx;
+}
+.userInfo .more-resource .look{
+  color:#bebebe; font-size: 30rpx;
+}
+.more-menu{
+  border-top:1px solid #eee;
+}
+.more-menu .menu-resource{
+  width:750rpx; text-align:left;
+  background: #fff;
+}
+.more-menu .menu-resource .avatar{
+  padding:40rpx 0;
+}
+.more-menu .menu-resource .avatar image{
+  width:40rpx; height: 40rpx; flex:1;
+  vertical-align:middle;
+}
+.more-menu .menu-resource .menuTxt{
+  flex:5; border-bottom:1px solid #eee;
+  font-size: 36rpx; color:#777; 
+  text-align: left;
+  padding:40rpx 0;
+  line-height: 40rpx;
+}
+.more-menu .menu-resource .menuTxt text{
+  vertical-align:middle;
+}

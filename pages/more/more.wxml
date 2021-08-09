@@ -1,0 +1,23 @@
+<view class="more container">
+  <view class="userInfo flex-wrp">
+    <view class="avatar flex-item">
+      <image src="{{user.avatarUrl}}"></image>
+    </view>
+    <view class="more-resource flex-item">
+      <text class="userName">{{user.nickName}}</text>
+      <text class="look">查看或编辑个人主页</text>
+    </view>
+  </view>
+  <view class="more-menu">
+    <block wx:for="{{menu}}" wx:for-item="item">
+      <view class="menu-resource flex-wrp">
+        <view class="avatar flex-item">
+          <image src="{{item.imgSrc}}"></image>
+        </view>
+        <view class="menuTxt flex-item">
+          <text>{{item.txt}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
